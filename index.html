@@ -1,40 +1,40 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-<title>Buy Properties | BAYTK</title>
+
+<title>BAYTK Real Estate</title>
 
 <style>
 
+
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#eef2f7;
-    color:#0f172a;
+    background-image:url("background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    height:100vh;
 }
-
-/* HEADER */
 
 header{
     height:70px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 40px;
+    padding-left:40px;
+    padding-right:40px;
 
-    background:linear-gradient(
-        90deg,
-        rgba(160,175,205,0.95),
-        rgba(70,95,130,0.95)
-    );
-
-    border-bottom:1px solid rgba(255,255,255,0.25);
+    background-color:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .logo{
-    width:190px;
+    width:250px;
     height:auto;
     display:block;
 }
@@ -43,234 +43,63 @@ nav a{
     margin-left:20px;
     color:white;
     text-decoration:none;
-    font-weight:500;
 }
 
-nav a:hover{
-    opacity:0.75;
-}
-
-/* TOP SECTION */
-
-.buy-hero{
-    padding:55px 20px 35px;
-    text-align:center;
-
-    background:linear-gradient(
-        180deg,
-        #dfe7f2,
-        #eef2f7
-    );
-}
-
-.buy-hero h1{
-    margin:0;
-    font-size:44px;
-    color:#10233f;
-}
-
-.buy-hero p{
-    margin-top:12px;
-    color:#5c6f86;
-    font-size:18px;
-}
-
-/* FILTER BOX */
-
-.filter-box{
-    max-width:1150px;
-    margin:0 auto 40px;
-    background:white;
-    padding:22px;
-
+.hero{
+    height:calc(100vh - 70px);
     display:flex;
-    gap:12px;
     justify-content:center;
-
-    border-radius:14px;
-
-    box-shadow:
-        0 10px 30px rgba(15,23,42,0.08);
+    align-items:center;
+    text-align:center;
 }
 
-.filter-box input,
-.filter-box select{
-    height:48px;
-    padding:0 14px;
-    border:1px solid #cbd5e1;
-    border-radius:8px;
-    font-size:15px;
-    background:white;
-    color:#0f172a;
+
+
+.hero h2{
+    color:white;
+    font-size:60px;
 }
 
-.filter-box input{
-    width:300px;
+.hero p{
+    color: white;
+    font-size: 22px;
+    margin-top: 15px;
 }
 
-.filter-box select{
-    width:180px;
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin-top:25px;
 }
 
-.filter-box button{
-    height:48px;
-    padding:0 28px;
+.search-box input{
+    width:500px;
+    height:55px;
     border:none;
-    border-radius:8px;
+    outline:none;
+    padding:0 20px;
+    font-size:18px;
+    border-radius:10px 0 0 10px;
+}
 
+.search-box button{
+    width:140px;
+    height:55px;
     background:#0f172a;
     color:white;
-
-    font-size:16px;
+    border:none;
+    font-size:18px;
+    border-radius:0 10px 10px 0;
     cursor:pointer;
 }
 
-.filter-box button:hover{
+.search-box button:hover{
     background:#1e3a5f;
 }
 
-/* TITLE ABOVE CARDS */
-
-.properties-title{
-    max-width:1200px;
-    margin:0 auto 20px;
-    padding:0 25px;
-}
-
-.properties-title h2{
-    margin:0;
-    font-size:28px;
-    color:#10233f;
-}
-
-.properties-title p{
-    color:#64748b;
-}
-
-/* PROPERTY GRID */
-
-.properties{
-    max-width:1200px;
-    margin:auto;
-    padding:0 25px 60px;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.property-card{
-    background:white;
-    border-radius:14px;
-    overflow:hidden;
-
-    box-shadow:
-        0 8px 25px rgba(15,23,42,0.10);
-
-    transition:0.25s;
-}
-
-.property-card:hover{
-    transform:translateY(-5px);
-    box-shadow:
-        0 15px 35px rgba(15,23,42,0.16);
-}
-
-.property-card img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-}
-
-.property-info{
-    padding:18px;
-}
-
-.property-info h3{
-    margin:0 0 10px;
-    font-size:22px;
-    color:#0f172a;
-}
-
-.price{
-    font-size:21px;
-    font-weight:bold;
-    color:#1e3a5f;
-    margin-bottom:8px;
-}
-
-.location{
-    color:#64748b;
-    margin-bottom:12px;
-}
-
-.details{
-    color:#334155;
-    font-size:14px;
-    margin-bottom:18px;
-}
-
-.view-btn{
-    display:inline-block;
-    padding:11px 18px;
-
-    background:#0f172a;
+.hero p{
     color:white;
-
-    text-decoration:none;
-    border-radius:7px;
-}
-
-.view-btn:hover{
-    background:#1e3a5f;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-    .properties{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .filter-box{
-        margin-left:20px;
-        margin-right:20px;
-        flex-wrap:wrap;
-    }
-}
-
-@media(max-width:600px){
-
-    header{
-        height:auto;
-        padding:15px 20px;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    nav a{
-        margin:0 7px;
-        font-size:14px;
-    }
-
-    .logo{
-        width:170px;
-    }
-
-    .filter-box{
-        flex-direction:column;
-    }
-
-    .filter-box input,
-    .filter-box select{
-        width:auto;
-    }
-
-    .properties{
-        grid-template-columns:1fr;
-    }
-
+    font-size:22px;
 }
 
 </style>
@@ -281,158 +110,38 @@ nav a:hover{
 
 <header>
 
-    <a href="index.html">
-        <img src="logo1.png" class="logo" alt="BAYTK Logo">
-    </a>
+<a href="index.html">
+    <img src="logo1.png" class="logo" alt="BAYTK Logo">
+</a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="buy.html">Buy</a>
-        <a href="#">Sell</a>
-        <a href="#">Rent</a>
-        <a href="#">Marketing</a>
-        <a href="#">About Us</a>
-        <a href="#">Log In</a>
-    </nav>
+<nav>
+
+	<a href="#">Home</a>
+	<a href="buy.html">Buy</a>
+	<a href="#">Sell</a>
+	<a href="#">Rent</a>
+	<a href="#">Marketing</a>
+	<a href="#">About Us</a>
+	<a href="#">Log In</a>
+
+	</nav>
 
 </header>
 
-
-<section class="buy-hero">
-
-    <h1>Properties for Sale</h1>
-
-    <p>Discover your next property across Saudi Arabia</p>
-
-</section>
+<section class="hero">
 
 
-<section class="filter-box">
+    <div class="hero-content">
 
-    <input type="text" placeholder="City or district">
+        <h2>Find Your Dream House</h2>
 
-    <select>
-        <option>Property Type</option>
-        <option>Villa</option>
-        <option>Apartment</option>
-        <option>Townhouse</option>
-        <option>Land</option>
-    </select>
+        <p>Buy, Sell & Rent Properties Across Saudi Arabia</p>
 
-    <select>
-        <option>Bedrooms</option>
-        <option>1 Bedroom</option>
-        <option>2 Bedrooms</option>
-        <option>3 Bedrooms</option>
-        <option>4+ Bedrooms</option>
-    </select>
+        <div class="search-box">
 
-    <select>
-        <option>Price Range</option>
-        <option>Under 500K SAR</option>
-        <option>500K - 1M SAR</option>
-        <option>1M - 2M SAR</option>
-        <option>2M+ SAR</option>
-    </select>
+            <input type="text" placeholder="Search by city, district or property">
 
-    <button>Search</button>
-
-</section>
-
-
-<div class="properties-title">
-
-    <h2>Featured Properties</h2>
-
-    <p>Explore selected properties available for sale</p>
-
-</div>
-
-
-<section class="properties">
-
-
-    <div class="property-card">
-
-        <img src="house1.jpg" alt="Luxury Villa">
-
-        <div class="property-info">
-
-            <h3>Luxury Villa</h3>
-
-            <div class="price">
-                1,850,000 SAR
-            </div>
-
-            <div class="location">
-                Al Khobar, Eastern Province
-            </div>
-
-            <div class="details">
-                4 Beds Â· 5 Baths Â· 420 mÂ²
-            </div>
-
-            <a href="#" class="view-btn">
-                View Property
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="property-card">
-
-        <img src="house2.jpg" alt="Modern Apartment">
-
-        <div class="property-info">
-
-            <h3>Modern Apartment</h3>
-
-            <div class="price">
-                780,000 SAR
-            </div>
-
-            <div class="location">
-                Dammam, Eastern Province
-            </div>
-
-            <div class="details">
-                3 Beds Â· 3 Baths Â· 190 mÂ²
-            </div>
-
-            <a href="#" class="view-btn">
-                View Property
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="property-card">
-
-        <img src="house3.jpg" alt="Family Villa">
-
-        <div class="property-info">
-
-            <h3>Family Villa</h3>
-
-            <div class="price">
-                1,250,000 SAR
-            </div>
-
-            <div class="location">
-                Dhahran, Eastern Province
-            </div>
-
-            <div class="details">
-                5 Beds Â· 4 Baths Â· 350 mÂ²
-            </div>
-
-            <a href="#" class="view-btn">
-                View Property
-            </a>
+            <button>Search</button>
 
         </div>
 
@@ -444,3 +153,11 @@ nav a:hover{
 </body>
 
 </html>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="baytkbot"
+  agent-id="0607ca05-2294-4e93-913a-26d0500a0e83"
+  language-code="en"
+></df-messenger>
