@@ -1,0 +1,163 @@
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>BAYTK Real Estate</title>
+
+<style>
+
+
+
+body{
+    margin:0;
+    background-image:url("background.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    height:100vh;
+}
+
+header{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-left:40px;
+    padding-right:40px;
+
+    background-color:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.logo{
+    width:250px;
+    height:auto;
+    display:block;
+}
+
+nav a{
+    margin-left:20px;
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    height:calc(100vh - 70px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+
+
+.hero h2{
+    color:white;
+    font-size:60px;
+}
+
+.hero p{
+    color: white;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    margin-top:25px;
+}
+
+.search-box input{
+    width:500px;
+    height:55px;
+    border:none;
+    outline:none;
+    padding:0 20px;
+    font-size:18px;
+    border-radius:10px 0 0 10px;
+}
+
+.search-box button{
+    width:140px;
+    height:55px;
+    background:#0f172a;
+    color:white;
+    border:none;
+    font-size:18px;
+    border-radius:0 10px 10px 0;
+    cursor:pointer;
+}
+
+.search-box button:hover{
+    background:#1e3a5f;
+}
+
+.hero p{
+    color:white;
+    font-size:22px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html">
+    <img src="logo1.png" class="logo" alt="BAYTK Logo">
+</a>
+
+<nav>
+
+	<a href="#">Home</a>
+	<a href="buy.html">Buy</a>
+	<a href="#">Sell</a>
+	<a href="#">Rent</a>
+	<a href="#">Marketing</a>
+	<a href="#">About Us</a>
+	<a href="#">Log In</a>
+
+	</nav>
+
+</header>
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+        <h2>Find Your Dream House</h2>
+
+        <p>Buy, Sell & Rent Properties Across Saudi Arabia</p>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search by city, district or property">
+
+            <button>Search</button>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="baytkbot"
+  agent-id="0607ca05-2294-4e93-913a-26d0500a0e83"
+  language-code="en"
+></df-messenger>
